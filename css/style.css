@@ -327,3 +327,142 @@ ul {
     font-size: 0.8rem;
     padding: 0.5rem 1rem;
 }
+
+/* Timeline */
+
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: rgba(100, 255, 218, 0.2);
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 3rem;
+}
+
+.timeline-item::last-child {
+    padding-bottom: 0;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.4rem;
+    top: 0.4rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    border: 2px solid var(--navy);
+}
+
+.timeline-date {
+    font-size: 0.8rem;
+    color: var(--accent);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content h3 {
+    color: var(--white);
+    font-size: 1.05rem;
+    margin-bottom: 0.25rem;
+}
+
+.timeline-content h4 {
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+}
+
+.timeline-content p {
+    color: var(--slate);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* Contact */
+
+.contact-container {
+    text-align: center;
+    max-width: 600px;
+}
+
+.content-sub {
+    color: var(--slate);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Footer */
+
+.footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid rgba(100, 255, 218, 0.1);
+    color: var(--slate);
+    font-size: 0.85rem;
+}
+
+.footer-sub {
+    margin-top: 0.5rem;
+    color: rgba(136, 146, 176, 0.6);
+    font-size: 0.8rem;
+}
+
+/* ACTIVE NAV LINK  */
+.nav-links a.active {
+    color: var(--accent);
+}
+
+/*  MOBILE  */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: var(--navy-light);
+        padding: 1.5rem 2rem;
+        gap: 1.5rem;
+        border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+    }
+
+    .nav-links.nav-open {
+        display: flex;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+    }
+
+    .project-header {
+        flex-direction: column;
+    }
+}
